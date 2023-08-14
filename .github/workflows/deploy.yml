@@ -16,7 +16,7 @@ jobs:
         uses: idoberko2/dokku-deploy-github-action@v1
         with:
             ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+            ssh-port: "1022"
             dokku-host: '191.52.62.199'
             app-name: 'node-test'
-            ssh-port: 1022
 
