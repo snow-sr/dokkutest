@@ -1,0 +1,15 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --watch main.js"
+  },
+  "author": "snow-sr",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
