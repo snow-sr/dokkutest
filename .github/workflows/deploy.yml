@@ -18,3 +18,4 @@ jobs:
             ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
             dokku-host: 'app1.fabricadesoftware.ifc.edu.br'
             app-name: 'nodetest'
+            ssh-port: 1022
