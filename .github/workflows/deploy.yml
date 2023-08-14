@@ -17,5 +17,5 @@ jobs:
       env:
         PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         PORT: "1022"
-        HOST: "191.52.62.199"
+        HOST: "ssh://dokku@191.52.62.199"
         PROJECT: "node-test"
