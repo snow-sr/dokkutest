@@ -1,21 +1,23 @@
-name: CD
+---
+name: 'deploy'
 
+# yamllint disable-line rule:truthy
 on:
   push:
     branches:
       - master
-      - main
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v1
-    - name: Dokku deploy
-      uses: vitalyliber/dokku-github-action@v7.1
-      env:
-        PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        PORT: "1022"
-        HOST: "ssh://dokku@191.52.62.199"
-        PROJECT: "node-test"
+      - name: Cloning repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Push to dokku
+        uses: dokku/github-action@master
+        with:
+          git_remote_url: 'ssh://dokku@191.52.62.199:1022/node-test'
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
