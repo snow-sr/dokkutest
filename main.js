@@ -3,8 +3,11 @@ import express from "express"
 const port = process.env.PORT || 3000;
 const app = express();
 
+
 app.get("/", (req, res) => {
-	res.send(`Olá mundo, essa é a aplicação node - ${req.ip.replace('::ffff:', '')}`)
+	let ip = req.ip;
+	ip.replace('::ffff:', '');
+	res.send(`Olá mundo, essa é a aplicação node - ${req.ip}`)
 });
 
 app.get("/env", (req, res) => {
