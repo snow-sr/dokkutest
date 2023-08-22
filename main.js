@@ -1,5 +1,5 @@
 import express from "express"
-import { getAllMusics, createAlotOfMusics, createMusic, getMusicById } from "./prisma/dbFunctions";
+import { getAllMusics, createAlotOfMusics, createMusic, getMusicById } from "./prisma/dbFunctions.js";
 const port = process.env.PORT || 3000;
 const app = express();
 
