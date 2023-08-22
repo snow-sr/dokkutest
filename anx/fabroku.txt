@@ -1,0 +1,14 @@
+--- Anotações Importantes ---
+
+É necessario que o sistema possa:
+
+- Criar um banco de dados
+- Criar um certificado ssl
+- Relacionar o Dokku app ao repositório do github
+
+
+É interessante que o sistema possa:
+
+- Verificar uso da máquina hospedeira
+- Analytics do aplicativo
+- Dokku enter interativo no website

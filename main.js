@@ -4,11 +4,11 @@ const port = process.env.PORT || 3000;
 const app = express();
 
 app.get("/", (req, res) => {
-	res.send(`Olá mundo, essa é a aplicação node - ${req.ip}`)
+	res.send(`Olá mundo, essa é a aplicação node - ${req.ip.replace('::ffff:', '')}`)
 });
 
 app.get("/env", (req, res) => {
-	res.send(`${process.env}`)
+	res.send(`${toString(process.env)}`)
 })
 
 // app.get("/musics", async (req, res) => {
