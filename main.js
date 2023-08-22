@@ -1,5 +1,5 @@
 import express from "express"
-const port = 9205;
+const port = process.env.PORT || 3000;
 const app = express();
 
 app.get("/", (req, res) => {
