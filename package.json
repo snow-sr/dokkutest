@@ -5,11 +5,12 @@
   "main": "main.js",
   "type": "module",
   "scripts": {
-    "start": "node --watch main.js"
+    "start": "node --watch main.js && npx prisma generate"
   },
   "author": "snow-sr",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "prisma": "^5.2.0"
   }
 }
