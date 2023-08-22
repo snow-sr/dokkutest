@@ -7,6 +7,10 @@ app.get("/", (req, res) => {
 	res.send(`Olá mundo, essa é a aplicação node - ${req.ip}`)
 });
 
+app.get("/env", (req, res) => {
+	res.send(`${process.env}`)
+})
+
 // app.get("/musics", async (req, res) => {
 // 	const musics = await getAllMusics()
 // 	res.send(`${musics} - ${req.ip}`)
