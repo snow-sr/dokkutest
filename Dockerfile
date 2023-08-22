@@ -8,6 +8,4 @@ run npm install
 
 copy . .
 
-expose 80:9204
-
 CMD ["npm", "start"]
